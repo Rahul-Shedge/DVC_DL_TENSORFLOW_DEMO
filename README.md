@@ -2,6 +2,9 @@
 create environment in same directory with below command
 
 
+download data ---> [source](https://drive.google.com/drive/u/5/folders/1tz4IOoJKdi999IRdqJY04VOifyllRzj1)
+
+
 ```bash
 conda create --prefix ./env python=3.7 -y
 ```

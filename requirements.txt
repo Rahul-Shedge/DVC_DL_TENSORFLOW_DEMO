@@ -1,11 +1,15 @@
+
+# import tensorflow
+
+
 dvc
-argparser
 tensorflow
 matplotlib
 numpy
 pandas
 tqdm
 PyYAML
-boto3  ## for aws 
+boto3 # aws
 
 
+# local packages intallations  -e .

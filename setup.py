@@ -24,6 +24,7 @@ setup(
         "PyYAML",
         "boto3"  ## for aws 
     ],
-    python_requires=">=3.9" )
+    python_requires=">=3.7" )
+
 
 

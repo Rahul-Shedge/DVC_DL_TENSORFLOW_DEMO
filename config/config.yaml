@@ -17,6 +17,6 @@ source_download_dirs:
   - ../../data/outside_data/cat
 
 local_data_dirs:
-  - ../../data/DL_Tensorflow/dog
-  - ../../data/DL_Tensorflow/cat
+  - data/dog
+  - data/cat
   

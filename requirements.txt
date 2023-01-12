@@ -5,6 +5,7 @@
 dvc
 tensorflow
 matplotlib
+joblib
 numpy
 pandas
 tqdm

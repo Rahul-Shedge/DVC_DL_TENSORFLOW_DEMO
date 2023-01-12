@@ -3,25 +3,18 @@ from src.utils.callbacks import create_and_save_checkpoints_callback,create_and_
 import argparse
 import os
 import logging
-import io
-
 
 logging_str = "[%(asctime)s:%(levelname)s:%(module)s]:%(message)s"
 log_dir ="logs"
 os.makedirs(log_dir,exist_ok=True)
 logging.basicConfig(filename=os.path.join(log_dir,"runnig_logs.log"),level=logging.INFO,format=logging_str,filemode="a")
 
-
 def prepare_callbacks(config_path,params_path):
     config = read_yaml(config_path)
-    params = read_yaml(params_path)
-
     artifacts = config["artifacts"]
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
-
     tensorboard_log_dir_path = os.path.join(artifacts_dir,artifacts["TENSORBOARD_ROOT_LOG_DIR"])
-    checkpoint_dir = os.path.join(artifacts_dir,artifacts["CHECKPOINT_DIR"])
-    
+    checkpoint_dir = os.path.join(artifacts_dir,artifacts["CHECKPOINT_DIR"])    
     callbacks_dir = os.path.join(artifacts_dir,artifacts["CALLBACKS_DIR"])
 
     create_directory([
@@ -40,9 +33,6 @@ def prepare_callbacks(config_path,params_path):
         checkpoint_dir,
     )
 
-
-
-
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config","-c",default="config/config.yaml")
@@ -51,7 +41,7 @@ if __name__ == "__main__":
     try:
         logging.info(">>>>>>>>>> stage 03 started")
         prepare_callbacks(config_path=parsed_args.config,params_path=parsed_args.params)
-        logging.info("stage 03 is completed ! callbacks preparation done .... >>>>>>>>>")
+        logging.info("stage 03 is completed ! callbacks preparation done and saved as binary.  .... >>>>>>>>>")
     except Exception as e:
         logging.exception(e)
         raise e

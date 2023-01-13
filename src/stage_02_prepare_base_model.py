@@ -55,7 +55,7 @@ if __name__ == "__main__":
     try:
         logging.info(">>>>>>>>>> stage 02 started")
         prepare_base_model(config_path=parsed_args.config,params_path=parsed_args.params)
-        logging.info("stage 02 is completed ! model building stage completed.... >>>>>>>>>")
+        logging.info("stage 02 is completed ! model building stage completed.... >>>>>>>>>\n\n")
     except Exception as e:
         logging.exception(e)
         raise e

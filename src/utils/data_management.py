@@ -1,7 +1,6 @@
 import tensorflow as tf
 import logging
 
-
 def train_valid_generator(data_dir,IMAGE_SIZE,BATCH_SIZE,do_data_augmentation):
     datagenerator_kwargs = dict(
         rescale = 1./255,
@@ -35,7 +34,6 @@ def train_valid_generator(data_dir,IMAGE_SIZE,BATCH_SIZE,do_data_augmentation):
             shear_range=0.2,
             zoom_range=0.2,
             **datagenerator_kwargs
-
         )
 
         logging.info(f"data augmentation is used for training.")

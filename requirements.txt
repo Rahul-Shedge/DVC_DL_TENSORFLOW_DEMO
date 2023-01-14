@@ -10,6 +10,7 @@ numpy
 pandas
 tqdm
 PyYAML
+scipy
 boto3 # aws
 
 
